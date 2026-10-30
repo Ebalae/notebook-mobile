@@ -1,14 +1,86 @@
 <div align="center">
-  <img src="assets/notebook-icon-light.png" alt="Notebook app icon" width="104" />
-  <h1>Notebook</h1>
-  <p>A calm, simple place for your notes and ideas.</p>
+  <img src="assets/notebook-icon-light.png" alt="Иконка приложения «Блокнот»" width="104" />
+  <h1>Блокнот</h1>
+  <p>Личные записи и идеи — аккуратно, просто и всегда под рукой.</p>
   <p>
     <img src="https://img.shields.io/badge/Expo-SDK%2057-4630EB?logo=expo" alt="Expo SDK 57" />
     <img src="https://img.shields.io/badge/React%20Native-0.86-61DAFB?logo=react" alt="React Native 0.86" />
-    <img src="https://img.shields.io/badge/Languages-5-7B8A44" alt="Five interface languages" />
+    <img src="https://img.shields.io/badge/Languages-5-7B8A44" alt="Пять языков интерфейса" />
   </p>
-  <p><a href="#english">English</a> · <a href="#русский">Русский</a></p>
+  <p><a href="#русский">Русский</a> · <a href="#english">English</a></p>
 </div>
+
+## Русский
+
+**Блокнот** — мобильное приложение для заметок, фотографий и напоминаний. Интерфейс доступен на русском, английском, испанском, немецком и китайском языках.
+
+### Скриншоты приложения
+
+<table>
+  <tr>
+    <td align="center"><img src="notebook/1.webp" width="250" alt="Главный экран в светлой теме" /><br />Главный экран · светлая тема</td>
+    <td align="center"><img src="notebook/2.webp" width="250" alt="Главный экран в тёмной теме" /><br />Главный экран · тёмная тема</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="notebook/3.webp" width="250" alt="Запись с фотографией" /><br />Запись с фотографией</td>
+    <td align="center"><img src="notebook/4.webp" width="250" alt="Поиск по записям" /><br />Поиск</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="notebook/5.webp" width="250" alt="Напоминание для записи" /><br />Напоминания</td>
+    <td align="center"><img src="notebook/6.webp" width="250" alt="Заметки с цветовой подсветкой" /><br />Цветовые выделения</td>
+  </tr>
+</table>
+
+### Возможности
+
+- 🗂️ Создание папок и вложенных папок для организации записей
+- 🔎 Поиск по заметкам
+- 📌 Закрепление важных записей, цветовая подсветка и перемещение между папками
+- 🖼️ Фотографии во вложениях, сохранение изображений и обмен заметками
+- 🔔 Напоминания о записях
+- 🎨 Светлая, тёмная и системная темы, настройка акцентного цвета
+- 💾 Автоматическое сохранение и перенос данных через резервную копию
+
+### Данные и конфиденциальность
+
+Регистрация не требуется: заметки, настройки и фотографии сохраняются на устройстве. Приложение не синхронизирует данные с сервером. Резервную копию можно вручную экспортировать и импортировать на другом устройстве.
+
+### Запуск
+
+Понадобятся Node.js и npm.
+
+```bash
+npm install
+npx expo start
+```
+
+Для запуска на конкретной платформе:
+
+```bash
+npm run android
+npm run ios   # Требуются macOS и Xcode
+npm run web
+```
+
+Конфигурация Android в [app.json](./app.json) ссылается на `google-services.json`, которого нет в репозитории. Если он нужен для сборки Android, настройте собственный Firebase-конфиг локально и **не добавляйте его в Git**.
+
+Проект использует [Expo SDK 57](https://docs.expo.dev/versions/v57.0.0/).
+
+### Структура проекта
+
+```text
+App.js                 Основной экран и логика приложения
+src/notebookData.js    Модели данных, темы и вспомогательные функции
+src/NotebookIcons.js   Векторные иконки интерфейса
+plugins/               Плагины конфигурации Expo
+assets/                Иконки и графические ресурсы
+```
+
+### Перед публикацией
+
+- Убедитесь, что имя автора, сайт и ссылки поддержки в приложении можно публиковать, а у вас есть права на исходный код и графические ресурсы.
+- Проект распространяется по лицензии [MIT](./LICENSE).
+- `private: true` в [package.json](./package.json) запрещает публикацию пакета в npm, но не мешает сделать репозиторий GitHub публичным.
 
 ## English
 
@@ -64,58 +136,3 @@ assets/                App icons and other visual assets
 - Make sure the author name, website, and support links in the app are intended to be public, and that you have the rights to publish the source code and visual assets.
 - This project is distributed under the [MIT License](./LICENSE).
 - `private: true` in [package.json](./package.json) prevents publishing the package to npm; it does not prevent making the GitHub repository public.
-
-## Русский
-
-**Блокнот** — мобильное приложение для заметок, фотографий и напоминаний. Интерфейс доступен на русском, английском, испанском, немецком и китайском языках.
-
-### Возможности
-
-- 🗂️ Создание папок и вложенных папок для организации записей
-- 🔎 Поиск по заметкам
-- 📌 Закрепление важных записей, цветовая подсветка и перемещение между папками
-- 🖼️ Фотографии во вложениях, сохранение изображений и обмен заметками
-- 🔔 Напоминания о записях
-- 🎨 Светлая, тёмная и системная темы, настройка акцентного цвета
-- 💾 Автоматическое сохранение и перенос данных через резервную копию
-
-### Данные и конфиденциальность
-
-Регистрация не требуется: заметки, настройки и фотографии сохраняются на устройстве. Приложение не синхронизирует данные с сервером. Резервную копию можно вручную экспортировать и импортировать на другом устройстве.
-
-### Запуск
-
-Понадобятся Node.js и npm.
-
-```bash
-npm install
-npx expo start
-```
-
-Для запуска на конкретной платформе:
-
-```bash
-npm run android
-npm run ios   # Требуются macOS и Xcode
-npm run web
-```
-
-Конфигурация Android в [app.json](./app.json) ссылается на `google-services.json`, которого нет в репозитории. Если он нужен для сборки Android, настройте собственный Firebase-конфиг локально и **не добавляйте его в Git**.
-
-Проект использует [Expo SDK 57](https://docs.expo.dev/versions/v57.0.0/).
-
-### Структура проекта
-
-```text
-App.js                 Основной экран и логика приложения
-src/notebookData.js    Модели данных, темы и вспомогательные функции
-src/NotebookIcons.js   Векторные иконки интерфейса
-plugins/               Плагины конфигурации Expo
-assets/                Иконки и графические ресурсы
-```
-
-### Перед публикацией
-
-- Убедитесь, что имя автора, сайт и ссылки поддержки в приложении можно публиковать, а у вас есть права на исходный код и графические ресурсы.
-- Проект распространяется по лицензии [MIT](./LICENSE).
-- `private: true` в [package.json](./package.json) запрещает публикацию пакета в npm, но не мешает сделать репозиторий GitHub публичным.
