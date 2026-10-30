@@ -76,12 +76,6 @@ plugins/               Плагины конфигурации Expo
 assets/                Иконки и графические ресурсы
 ```
 
-### Перед публикацией
-
-- Убедитесь, что имя автора, сайт и ссылки поддержки в приложении можно публиковать, а у вас есть права на исходный код и графические ресурсы.
-- Проект распространяется по лицензии [MIT](./LICENSE).
-- `private: true` в [package.json](./package.json) запрещает публикацию пакета в npm, но не мешает сделать репозиторий GitHub публичным.
-
 ## English
 
 **Notebook** is a mobile notes app for organizing thoughts, photos, and reminders. The interface is available in English, Russian, Spanish, German, and Chinese.
@@ -130,9 +124,3 @@ src/NotebookIcons.js   Vector interface icons
 plugins/               Expo configuration plugins
 assets/                App icons and other visual assets
 ```
-
-### Before publishing
-
-- Make sure the author name, website, and support links in the app are intended to be public, and that you have the rights to publish the source code and visual assets.
-- This project is distributed under the [MIT License](./LICENSE).
-- `private: true` in [package.json](./package.json) prevents publishing the package to npm; it does not prevent making the GitHub repository public.
